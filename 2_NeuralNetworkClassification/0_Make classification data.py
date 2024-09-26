@@ -4,6 +4,10 @@ import pandas as pd
 import torch
 from torch import nn
 from sklearn.model_selection import train_test_split
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from helper_functions import plot_predictions, plot_decision_boundary
 
 # Make 1000 samples 
 n_samples = 1000
@@ -34,8 +38,8 @@ plt.scatter(x=X[:, 0],
             cmap=plt.cm.RdYlBu)
 
 # Save the plot as an image file
-plt.savefig('2_NeuralNetworkClassification/circles_plot(1).png')
-print("Plot saved as 'circles_plot(1).png'")
+plt.savefig('2_NeuralNetworkClassification/0_circles_plot(1).png')
+print("Plot saved as '0_circles_plot(1).png'")
 
 # Clear the current plot
 plt.clf()
@@ -223,11 +227,6 @@ else:
   with open("helper_functions.py", "wb") as f:
     f.write(request.content)
 
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from helper_functions import plot_predictions, plot_decision_boundary
-
 # Plot decision boundaries for training and test sets
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
@@ -236,8 +235,8 @@ plot_decision_boundary(model_0, X_train, y_train)
 plt.subplot(1, 2, 2)
 plt.title("Test")
 plot_decision_boundary(model_0, X_test, y_test)
-plt.savefig('2_NeuralNetworkClassification/trainandtest(4).png')
-print("Plot saved as 'trainandtest(4).png'")
+plt.savefig('2_NeuralNetworkClassification/0_trainandtest(4).png')
+print("Plot saved as '0_trainandtest(4).png'")
 
 print("\n")
 
@@ -316,8 +315,8 @@ plot_decision_boundary(model_1, X_train, y_train)
 plt.subplot(1, 2, 2)
 plt.title("Test")
 plot_decision_boundary(model_1, X_test, y_test)
-plt.savefig('2_NeuralNetworkClassification/trainandtest(5).png')
-print("Plot saved as 'trainandtest(5).png'")
+plt.savefig('2_NeuralNetworkClassification/0_trainandtest(5).png')
+print("Plot saved as '0_trainandtest(5).png'")
 
 print("\n")
 
@@ -353,8 +352,8 @@ plot_predictions(train_data=X_train_regression,
     test_labels=y_test_regression
 )
 # Save the plot as an image file
-plt.savefig('2_NeuralNetworkClassification/regression_plot(5).png')
-print("Plot saved as 'regression_plot(5)'")
+plt.savefig('2_NeuralNetworkClassification/0_regression_plot(5).png')
+print("Plot saved as '0_regression_plot(5)'")
 # Optionally, you can clear the current plot to free up memory
 plt.clf()
 
@@ -426,5 +425,5 @@ plot_predictions(train_data=X_train_regression.cpu(),
                  test_data=X_test_regression.cpu(),
                  test_labels=y_test_regression.cpu(),
                  predictions=y_preds.cpu())
-plt.savefig('2_NeuralNetworkClassification/regression_plot(5_2).png')
-print("Plot saved as 'regression_plot(5_2).png'")
+plt.savefig('2_NeuralNetworkClassification/0_regression_plot(5_2).png')
+print("Plot saved as '0_regression_plot(5_2).png'")
