@@ -121,7 +121,6 @@ class FashionMNISTModelV1(nn.Module):
     def forward(self, x: torch.Tensor):
         return self.layer_stack(x)
     
-torch.manual_seed(42)
 model_1 = FashionMNISTModelV1(input_shape=784, # number of input features
     hidden_units=10,
     output_shape=len(class_names) # number of output classes desired
