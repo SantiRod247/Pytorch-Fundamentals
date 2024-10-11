@@ -44,10 +44,6 @@ This repository is structured to provide a progressive learning experience:
 
 3. Navigate to each module and follow the instructions in their respective READMEs.
 
-## Contributing
-
-Contributions to improve the exercises or add new topics are welcome. Please feel free to submit pull requests or open issues for discussion.
-
 ## Acknowledgments
 
 - PyTorch documentation and tutorials
